@@ -1,0 +1,12 @@
+<div>
+    <select ng-options="color.text group by color.type for color in colors" ng-model="selected" ng-change="changeColor()"></select>
+    <span ng-class="selected.class">
+       <h3> some text </h3>
+    </span>
+    <br>
+    <input type="text" ng-model="flt">
+    <h3>Colors list</h3>
+    <ul ng-repeat="color in colors | filter:flt" >
+        <li>{{color.text}}</li>
+    </ul>
+</div>

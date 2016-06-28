@@ -1,0 +1,13 @@
+
+ <ng-form name="myForm" ng-controller="FormsController" class="my-form">
+     userType: <input name="input" ng-model="userType" required>
+     <span class="error" ng-show="myForm.input.$error.required">Required!</span><br>
+     myForm.$pristine:{{myForm.$pristine}}<br><!--formul nu a fost modificat, atins-->
+     myForm.$dirty: {{myForm.$dirty}}<br> <!--formul  a fost modificat-->
+     myForm.$valid:{{myForm.$valid}}<br>
+     myForm.$invalid:{{myForm.$invalid}}<br>
+     myForm.$submitted:{{myForm.$submitted}}<br>
+     myForm.input.$valid: {{myForm.input.$valid}}<br>
+     myForm.$error:{{myForm.$error}}<br>
+     <input ng-click="valideaza()"type="submit">
+ </ng-form>
